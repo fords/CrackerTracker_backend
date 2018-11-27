@@ -3,6 +3,11 @@
 require 'rails_helper'
 
 RSpec.describe 'routes for users' do
+
+  it "routes to #create" do
+    expect(:post => "/users").to route_to("users#create")
+  end
+  
   it 'routes POST /sign-up to the users#signup action' do
     expect(post('/sign-up')).to route_to('users#signup')
   end
