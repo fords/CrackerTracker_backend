@@ -6,7 +6,7 @@ curl --include --request PATCH "http://localhost:4741/users/${ID}" \
     "users": {
       "name": "'"${name}"'",
       "breakfast": "'"${breakfast}"'",
-      "lunc": "'"${lunch}"'",
+      "lunch": "'"${lunch}"'",
       "dinner": "'"${dinner}"'",
       "calendar": "'"${calendar}"'"
     }

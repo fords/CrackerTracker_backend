@@ -6,7 +6,7 @@ curl --include --request POST "http://localhost:4741/foods" \
     "users": {
       "name": "'"${name}"'",
       "breakfast": "'"${breakfast}"'",
-      "lunc": "'"${lunch}"'",
+      "lunch": "'"${lunch}"'",
       "dinner": "'"${dinner}"'",
       "calendar": "'"${calendar}"'"
     }
