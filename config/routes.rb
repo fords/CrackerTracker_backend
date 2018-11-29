@@ -2,6 +2,11 @@
 
 Rails.application.routes.draw do
   resources :foods,except: %i[new edit]
+
+  post '/foods' => 'foods#create'
+  delete '/foods/' => 'foods#destroy'
+  patch '/foods' => 'foods#update'
+
   # RESTful routes
   resources :examples, except: %i[new edit]
   resources :users, only: %i[index show update create]
