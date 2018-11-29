@@ -1,4 +1,4 @@
-class FoodsController < ApplicationController
+class FoodsController < OpenReadController
   before_action :set_food, only: [:show, :update, :destroy]
 
   # GET /foods
