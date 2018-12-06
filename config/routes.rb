@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :foods,except: %i[new edit]
+  resources :foods, except: %i[new edit]
 
   post '/foods' => 'foods#create'
   delete '/foods/' => 'foods#destroy'

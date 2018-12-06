@@ -1,5 +1,6 @@
 class FoodsController < OpenReadController
-  before_action :set_food, only: [:show, :update, :destroy]
+  before_action :set_food, only: [:show]
+   # :update, :destroy]
 
   # GET /foods
   def index
