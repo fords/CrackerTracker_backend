@@ -1,6 +1,6 @@
 class FoodsController < OpenReadController
   before_action :set_food, only: [:show,:update, :destroy]
-   # :update, :destroy]
+   # :update, :destroy]   OpenReadController  ProtectedController
 
   # GET /foods
   def index
@@ -42,7 +42,7 @@ class FoodsController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_food
-      @food = Food.find(params[:id])
+      @food = current_user.foods.find(params[:id])   #Food destory update is limited to current user authentication
     end
 
     # Only allow a trusted parameter "white list" through.
