@@ -46,11 +46,11 @@ class FoodsController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_food
-<<<<<<< HEAD
-      @food = current_user.foods.find(params[:id])
-=======
+
+      # @food = current_user.foods.find(params[:id])
+
       @food = current_user.foods.find(params[:id])   #Food destory update is limited to current user authentication
->>>>>>> add authentication
+# >>>>>>> add authentication
     end
 
     # Only allow a trusted parameter "white list" through.
