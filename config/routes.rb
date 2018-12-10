@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+root "application#index"
 
 Rails.application.routes.draw do
   resources :foods, except: %i[new edit]
