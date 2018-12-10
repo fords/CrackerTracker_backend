@@ -1,6 +1,10 @@
 class FoodsController < OpenReadController
   before_action :set_food, only: [:show,:update, :destroy]
+<<<<<<< HEAD
    # :update, :destroy]
+=======
+   # :update, :destroy]   OpenReadController  ProtectedController
+>>>>>>> development
 
   # GET /foods
   def index
@@ -16,7 +20,11 @@ class FoodsController < OpenReadController
 
   # POST /foods
   def create
+<<<<<<< HEAD
     @food = current_user.foods.new(food_params)
+=======
+    @food = current_user.foods.build(food_params)
+>>>>>>> development
 
     if @food.save
       render json: @food, status: :created, location: @food
@@ -42,11 +50,16 @@ class FoodsController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_food
+<<<<<<< HEAD
       @food = current_user.foods.find(params[:id])
+=======
+      @food = current_user.foods.find(params[:id])   #Food destory update is limited to current user authentication
+>>>>>>> development
     end
 
     # Only allow a trusted parameter "white list" through.
     def food_params
       params.require(:food).permit(:name, :breakfast, :lunch, :dinner, :calendar)
+      # , :dinner, :calendar
     end
 end
