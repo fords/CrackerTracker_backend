@@ -8,7 +8,9 @@ curl "http://localhost:4741/sign-in" \
     "credentials": {
       "email": "'"${EMAIL}"'",
       "password": "'"${PASSWORD}"'"
+
     }
   }'
 
 echo
+# "name": "'"${NAME}"'"
