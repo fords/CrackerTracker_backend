@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # RESTful routes
   resources :examples, except: %i[new edit]
   resources :users, only: %i[index show update create]
-  resources :leads, path: ''
+  # resources :leads, path: ''
   # Custom routes
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
