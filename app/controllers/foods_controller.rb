@@ -55,7 +55,7 @@ class FoodsController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def food_params
-      params.require(:food).permit(:name, :breakfast, :lunch, :dinner, :calendar)
+      params.require(:food).permit(:name, :breakfast, :lunch, :dinner, :calendar).reject{|_, v| v.blank?}
       # , :dinner, :calendar
     end
 end
